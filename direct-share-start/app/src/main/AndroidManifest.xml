@@ -34,11 +34,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!-- Reference resource file where the app's shortcuts are defined -->
-            <!-- TODO STEP 1 - Declare sharing shortcuts in an xml resource
-            <meta-data
-                android:name="android.app.shortcuts"
-                android:resource="@xml/shortcuts" />
-                 TODO END STEP 1 -->
+            <!-- TODO STEP 4 - Declare sharing shortcuts in an xml resource-->
+            <!--<meta-data-->
+                <!--android:name="android.app.shortcuts"-->
+                <!--android:resource="@xml/shortcuts" />-->
+            <!-- TODO END STEP 4 -->
         </activity>
 
         <activity
@@ -54,11 +54,11 @@
                  backwards compatibility with the old DirectShare API.
                  The activity that receives the Sharing Shortcut intent needs to be taken into
                  account with this chooser target provider. -->
-            <!-- TODO STEP 4 - Direct Share backwards compatible with older Android versions
-            <meta-data
-                android:name="android.service.chooser.chooser_target_service"
-                android:value="androidx.sharetarget.ChooserTargetServiceCompat" />
-                 TODO END STEP 4 -->
+            <!-- TODO STEP 8 - Direct Share backwards compatible with older Android versions-->
+            <!--<meta-data-->
+                <!--android:name="android.service.chooser.chooser_target_service"-->
+                <!--android:value="androidx.sharetarget.ChooserTargetServiceCompat" />-->
+            <!-- TODO END STEP 8 -->
         </activity>
 
         <activity
@@ -71,17 +71,17 @@
             Here we specify a FileProvider for our app.
             The file_paths xml resource specifies the directories the FileProvider
             can generate content URIs for. -->
-        <!-- TODO STEP 7 - Add File Provider
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.example.android.directshare.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
-             TODO END STEP 7 -->
+        <!-- TODO STEP 9.3 - Add File Provider -->
+        <!--<provider-->
+            <!--android:name="androidx.core.content.FileProvider"-->
+            <!--android:authorities="com.example.android.directshare.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_paths" />-->
+        <!--</provider>-->
+        <!-- TODO END STEP 9.3 -->
     </application>
 
 </manifest>

@@ -64,43 +64,43 @@ class SharingShortcutsManager {
     fun pushDirectShareTargets(context: Context) {
         val shortcuts = ArrayList<ShortcutInfoCompat>()
 
-        /* TODO STEP 2 - Create categories matching the ones declared in the share-targets
         // Category that our sharing shortcuts will be assigned to
-        val contactCategories = setOf(categoryTextShareTarget)
-           TODO END STEP 2 */
+//        // TODO STEP 5 - Create categories matching the ones declared in the share-targets
+//        val contactCategories = setOf(categoryTextShareTarget)
+//        // TODO END STEP 5
 
-        /* TODO STEP 3 - Publish the sharing shortcuts
-        // Adding maximum number of shortcuts to the list
-        for (id in 0 until maxShortcuts) {
-            val contact = Contact.byId(id)
-
-            // Item that will be sent if the shortcut is opened as a static launcher shortcut
-            val staticLauncherShortcutIntent = Intent(Intent.ACTION_DEFAULT)
-
-            // Creates a new Sharing Shortcut and adds it to the list
-            // The id passed in the constructor will become EXTRA_SHORTCUT_ID in the received Intent
-            shortcuts.add(
-                    ShortcutInfoCompat.Builder(context, Integer.toString(id))
-                            .setShortLabel(contact.name)
-                            // Icon that will be displayed in the share target
-                            .setIcon(IconCompat.createWithResource(context, contact.icon))
-                            .setIntent(staticLauncherShortcutIntent)
-                            // Make this sharing shortcut cached by the system
-                            // Even if it is unpublished, it can still appear on the sharesheet
-                            .setLongLived()
-                            .setCategories(contactCategories)
-                            // Person objects are used to give better suggestions
-                            .setPerson(
-                                    Person.Builder()
-                                            .setName(contact.name)
-                                            .build()
-                            )
-                            .build()
-            )
-        }
-
-        ShortcutManagerCompat.addDynamicShortcuts(context, shortcuts)
-           TODO END STEP 3 */
+//        // TODO STEP 6 - Publish the sharing shortcuts
+//        // Adding maximum number of shortcuts to the list
+//        for (id in 0 until maxShortcuts) {
+//            val contact = Contact.byId(id)
+//
+//            // Item that will be sent if the shortcut is opened as a static launcher shortcut
+//            val staticLauncherShortcutIntent = Intent(Intent.ACTION_DEFAULT)
+//
+//            // Creates a new Sharing Shortcut and adds it to the list
+//            // The id passed in the constructor will become EXTRA_SHORTCUT_ID in the received Intent
+//            shortcuts.add(
+//                    ShortcutInfoCompat.Builder(context, Integer.toString(id))
+//                            .setShortLabel(contact.name)
+//                            // Icon that will be displayed in the share target
+//                            .setIcon(IconCompat.createWithResource(context, contact.icon))
+//                            .setIntent(staticLauncherShortcutIntent)
+//                            // Make this sharing shortcut cached by the system
+//                            // Even if it is unpublished, it can still appear on the sharesheet
+//                            .setLongLived()
+//                            .setCategories(contactCategories)
+//                            // Person objects are used to give better suggestions
+//                            .setPerson(
+//                                    Person.Builder()
+//                                            .setName(contact.name)
+//                                            .build()
+//                            )
+//                            .build()
+//            )
+//        }
+//
+//        ShortcutManagerCompat.addDynamicShortcuts(context, shortcuts)
+//        // TODO END STEP 6
     }
 
     /**

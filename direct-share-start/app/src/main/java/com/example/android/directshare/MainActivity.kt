@@ -79,20 +79,20 @@ class MainActivity : Activity() {
         sharingIntent.type = "text/plain"
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, bodyEditText.text.toString())
 
-        /* TODO STEP 5 - Add title to the shared content
         // (Optional) If you want a preview title, set it with Intent.EXTRA_TITLE
-        sharingIntent.putExtra(Intent.EXTRA_TITLE, getString(R.string.send_intent_title))
-           TODO END STEP 5 */
+//        // TODO STEP 9.1 - Add title to the shared content
+//        sharingIntent.putExtra(Intent.EXTRA_TITLE, getString(R.string.send_intent_title))
+//        // TODO END STEP 9.1
 
-        /* TODO STEP 6 - Add thumbnail to the shared content
         // (Optional) if you want a preview thumbnail, create a content URI and add it
         // The system only supports content URIs
-        val thumbnail = getClipDataThumbnail()
-        thumbnail?.let {
-            sharingIntent.clipData = it
-            sharingIntent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
-        }
-           TODO END STEP 6 */
+//        // TODO STEP 9.2 - Add thumbnail to the shared content
+//        val thumbnail = getClipDataThumbnail()
+//        thumbnail?.let {
+//            sharingIntent.clipData = it
+//            sharingIntent.flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
+//        }
+//        // TODO END STEP 9.2
 
         startActivity(Intent.createChooser(sharingIntent, null))
     }
