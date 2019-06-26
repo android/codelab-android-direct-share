@@ -18,7 +18,7 @@
 
 buildscript {
     ext.versions = [
-            'compileSdk'           : 'android-Q',
+            'compileSdk'           : 29,
             'minSdk'               : 21,
             'targetSdk'            : 29,
             'kotlin_version'       : '1.3.21',
