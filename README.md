@@ -1,6 +1,6 @@
 # Direct Share to an Android app
 
-This folder contains the source code for the [Direct Share to an Android app codelab]().
+This folder contains the source code for the [Direct Share to an Android app codelab](https://codelabs.developers.google.com/codelabs/android-direct-share/#0).
 
 ## License
 
