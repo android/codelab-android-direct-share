@@ -69,7 +69,7 @@ class SharingShortcutsManager {
 //        val contactCategories = setOf(categoryTextShareTarget)
 //        // TODO END STEP 5
 
-//        // TODO STEP 6 - Publish the sharing shortcuts
+//        // TODO STEP 6 - Prepare the sharing shortcuts
 //        // Adding maximum number of shortcuts to the list
 //        for (id in 0 until maxShortcuts) {
 //            val contact = Contact.byId(id)
@@ -87,7 +87,7 @@ class SharingShortcutsManager {
 //                            .setIntent(staticLauncherShortcutIntent)
 //                            // Make this sharing shortcut cached by the system
 //                            // Even if it is unpublished, it can still appear on the sharesheet
-//                            .setLongLived()
+//                            .setLongLived(true)
 //                            .setCategories(contactCategories)
 //                            // Person objects are used to give better suggestions
 //                            .setPerson(
@@ -98,9 +98,11 @@ class SharingShortcutsManager {
 //                            .build()
 //            )
 //        }
-//
-//        ShortcutManagerCompat.addDynamicShortcuts(context, shortcuts)
 //        // TODO END STEP 6
+
+//        // TODO STEP 7 - Publish the sharing shortcuts
+//        ShortcutManagerCompat.addDynamicShortcuts(context, shortcuts)
+//        // TODO END STEP 7
     }
 
     /**

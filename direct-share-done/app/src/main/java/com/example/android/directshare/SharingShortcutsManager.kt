@@ -84,7 +84,7 @@ class SharingShortcutsManager {
                             .setIntent(staticLauncherShortcutIntent)
                             // Make this sharing shortcut cached by the system
                             // Even if it is unpublished, it can still appear on the sharesheet
-                            .setLongLived()
+                            .setLongLived(true)
                             .setCategories(contactCategories)
                             // Person objects are used to give better suggestions
                             .setPerson(
