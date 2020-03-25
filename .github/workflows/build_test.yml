@@ -47,15 +47,16 @@ jobs:
         name: junit-results
         path: ci_results/junit
 
-    - name: Copy lint results
-      if: always()
-      run: |
-        mkdir -p ci_results/lint
-        find -E . -type f -regex ".*/build/reports/lint-results.*(html|xml)" -exec cp {} ci_results/lint/ \;
-        
-    - name: Upload lint results
+    - name: Upload build reports (direct-share-start)
       if: always()
       uses: actions/upload-artifact@v1
       with:
-        name: lint-results
-        path: ci_results/lint
+        name: build-reports-direct-share-start
+        path: direct-share-start/app/build/reports
+
+    - name: Upload build reports (direct-share-done)
+      if: always()
+      uses: actions/upload-artifact@v1
+      with:
+        name: build-reports-direct-share-done
+        path: direct-share-done/app/build/reports
