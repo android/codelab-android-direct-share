@@ -51,7 +51,7 @@ jobs:
       if: always()
       run: |
         mkdir -p ci_results/lint
-        find -E . -type f -regex ".*/build/reports/lint-results.*(html|xml) -exec cp {} ci_results/lint/ \;
+        find -E . -type f -regex ".*/build/reports/lint-results.*(html|xml)" -exec cp {} ci_results/lint/ \;
         
     - name: Upload lint results
       if: always()
