@@ -34,19 +34,6 @@ jobs:
     - name: Build and check all modules
       run: ./gradlew assembleDebug assembleDebugAndroidTest lintDebug testDebug
 
-    - name: Copy test results
-      if: always()
-      run: |
-        mkdir -p ci_results/junit
-        find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ci_results/junit/ \;
-        
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v1
-      with:
-        name: junit-results
-        path: ci_results/junit
-
     - name: Upload build reports (direct-share-start)
       if: always()
       uses: actions/upload-artifact@v1
@@ -60,3 +47,5 @@ jobs:
       with:
         name: build-reports-direct-share-done
         path: direct-share-done/app/build/reports
+
+    # Project have not tests; omitting steps for publishing test artifacts
