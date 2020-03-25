@@ -38,6 +38,7 @@
         android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_medium"
         android:layout_marginEnd="@dimen/margin_medium"
+        android:padding="@dimen/padding_medium"
         android:hint="@string/text_to_share"
         android:text="@string/hello" />
 

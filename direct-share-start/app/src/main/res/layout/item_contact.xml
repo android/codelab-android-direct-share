@@ -26,5 +26,6 @@
     android:paddingTop="@dimen/margin_tiny"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:paddingBottom="@dimen/margin_tiny"
+    android:textColor="@android:color/black"
     tools:drawableStart="@mipmap/logo_avatar"
     tools:text="Taro" />
