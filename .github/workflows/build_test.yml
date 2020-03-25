@@ -32,17 +32,30 @@ jobs:
         java-version: 1.8
           
     - name: Build and check all modules
-      run: ./gradlew assembleDebug assembleDebugAndroidTest direct-share-start:lintDebug direct-share-done:lintDebug testDebug
+      run: ./gradlew assembleDebug assembleDebugAndroidTest lintDebug testDebug
 
     - name: Copy test results
       if: always()
       run: |
-        mkdir -p junit
-        find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} junit/ \;
+        mkdir -p ci_results/junit
+        find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ci_results/junit/ \;
         
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v1
       with:
         name: junit-results
-        path: junit
+        path: ci_results/junit
+
+    - name: Copy lint results
+      if: always()
+      run: |
+        mkdir -p ci_results/lint
+        find -E . -type f -regex ".*/build/reports/lint-results.*(html|xml) -exec cp {} ci_results/lint/ \;
+        
+    - name: Upload lint results
+      if: always()
+      uses: actions/upload-artifact@v1
+      with:
+        name: lint-results
+        path: ci_results/lint
