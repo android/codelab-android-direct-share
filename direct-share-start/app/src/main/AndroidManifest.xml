@@ -28,7 +28,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -44,7 +45,8 @@
         <activity
             android:name=".SendMessageActivity"
             android:label="@string/app_name"
-            android:theme="@style/DirectShareDialogTheme">
+            android:theme="@style/DirectShareDialogTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
