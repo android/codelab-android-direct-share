@@ -23,12 +23,12 @@ buildscript {
             'targetSdk'            : 31,
             'kotlin_version'       : '1.6.10',
             'android_gradle_plugin': '7.0.4',
-            'androidxCore'         : '1.2.0',
-            'appcompat'            : '1.1.0',
+            'androidxCore'         : '1.7.0',
+            'appcompat'            : '1.4.1',
             'shareTarget'          : '1.2.0-rc01',
-            'recyclerView'         : '1.1.0',
+            'recyclerView'         : '1.2.1',
             'junit'                : '4.13.2',
-            'test_runner'          : '1.1.1',
+            'test_runner'          : '1.4.0',
             'espresso'             : '3.4.0',
     ]
     ext.names = [
