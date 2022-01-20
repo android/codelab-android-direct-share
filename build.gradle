@@ -18,18 +18,18 @@
 
 buildscript {
     ext.versions = [
-            'compileSdk'           : 29,
+            'compileSdk'           : 31,
             'minSdk'               : 21,
-            'targetSdk'            : 29,
-            'kotlin_version'       : '1.3.61',
-            'android_gradle_plugin': '3.3.2',
-            'androidxCore'         : '1.2.0',
-            'appcompat'            : '1.1.0',
-            'shareTarget'          : '1.0.0-rc01',
-            'recyclerView'         : '1.1.0',
-            'junit'                : '4.12',
-            'test_runner'          : '1.1.1',
-            'espresso'             : '3.1.1',
+            'targetSdk'            : 31,
+            'kotlin_version'       : '1.6.10',
+            'android_gradle_plugin': '7.0.4',
+            'androidxCore'         : '1.7.0',
+            'appcompat'            : '1.4.1',
+            'shareTarget'          : '1.2.0-rc01',
+            'recyclerView'         : '1.2.1',
+            'junit'                : '4.13.2',
+            'test_runner'          : '1.4.0',
+            'espresso'             : '3.4.0',
     ]
     ext.names = [
             'applicationId': 'com.example.android.directshare'
@@ -39,6 +39,6 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
